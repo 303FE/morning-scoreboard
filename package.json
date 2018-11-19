@@ -1,7 +1,7 @@
 {
   "name": "morning-scoreboard",
-  "version": "1.0.0",
-  "description": "Angular scoreboard component . Good morning ",
+  "version": "1.0.1",
+  "description": "Angular scoreboard component . Good morning . ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
