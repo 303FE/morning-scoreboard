@@ -1,0 +1,67 @@
+.morning-scoreboard{
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 16px;
+    perspective: 300px;
+    justify-content: center;
+    background-color: transparent;
+}
+.morning-scoreboard li{
+    width: 2em;
+    font-size: 2em;
+    color: #fff;
+    height: 2.8em;
+    margin: 0.2em;
+    transform: rotateX(0);
+    position: relative;
+    overflow: hidden;
+}
+
+.morning-scoreboard li::before, .morning-scoreboard li::after{
+    content: '';
+    width: 0.4em;
+    height: 4px;
+    position: absolute;
+    top: 48%;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: 1px 0 6px #6e6e6e;
+}
+.morning-scoreboard li::before {
+    left: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.morning-scoreboard li::after{
+    right: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.morning-scoreboard li div{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: inherit;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background-color: #0099ff;
+    box-shadow: 1px 0 4px #ccc;
+    text-shadow: 1px 0 6px #6e6e6e;
+}
+
+div.front{
+    transform: rotateX(0);
+    z-index: 1;
+}
+div.back{
+    transform: rotateX(-180deg);
+    z-index: 2;
+}

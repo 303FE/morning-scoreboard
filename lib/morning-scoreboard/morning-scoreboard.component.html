@@ -1,0 +1,6 @@
+<ul class="morning-scoreboard">
+    <li *ngFor="let card of cards index as i"  [style.transition]="_transitionStyle">
+      <div [ngClass]="{'front': card.isFront, 'back': !card.isFront}">{{card.front}}</div>
+      <div [ngClass]="{'front': !card.isFront, 'back': card.isFront}">{{card.back}}</div>
+    </li>
+</ul>
